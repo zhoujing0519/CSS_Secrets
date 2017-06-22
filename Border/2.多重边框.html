@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+
+		html{
+			background-color: skyblue;
+		}
+	
+		.boxshadow{
+			width: 200px;
+			height: 100px;
+			margin: 100px auto;
+			background: yellowgreen;
+			box-shadow: 0 0 0 10px #655,
+						0 0 0 15px deeppink,
+						0 2px 5px 15px rgba(0, 0, 0, .6);
+		}
+
+		.outline{
+			width: 200px;
+			height: 100px;
+			margin: 0 auto;
+			background: brown;
+			border-radius: 8px;
+			outline: 1px dashed #fff;
+			outline-offset: -10px;
+		}	
+	</style>
+</head>
+<body>
+	<div class="boxshadow"></div>
+	<div class="outline"></div>
+</body>
+</html>
