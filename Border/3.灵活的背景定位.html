@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		html{
+			background-color: skyblue;
+		}
+	
+		div{
+			margin-bottom: 20px;
+			color: #fff;
+			font-size: 20px;
+			padding: 10px;
+		}
+
+		.pirate{
+			width: 500px;
+			height: 250px;
+			background: url(../images/pirate.png) no-repeat bottom right #58a;
+			background-position: right 20px bottom 10px;
+		}
+
+		.pirate_eye{
+			width: 500px;
+			height: 250px;
+			background: url(../images/pirate_eye.png) no-repeat bottom right #58a;
+			background-origin: content-box;
+		}
+
+		.pirate_2{
+			width: 500px;
+			height: 250px;
+			background: url(../images/pirate.png) no-repeat bottom right #58a;
+			background-position: calc(100% - 20px) calc(100% - 10px);
+		}
+	</style>
+</head>
+<body>
+	<div class="pirate">background-position扩展语法方案</div>
+	<div class="pirate_eye">background-origin方案</div>
+	<div class="pirate_2">calc()方案</div>
+</body>
+</html>
