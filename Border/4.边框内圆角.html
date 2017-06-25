@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+
+		.something-meaningful{
+			background: #655;
+			padding: .8em;
+
+			margin-bottom: .8em;
+			width: 8em;
+		}
+
+		.something-meaningful > div{
+			background: tan;
+			border-radius: .8em;
+			padding: 1em;
+		}
+
+		.single{
+			background: tan;
+			border-radius: .8em;
+			padding: 1em;
+
+			box-shadow: 0 0 0 .6em #655;
+			outline: .6em solid #655;
+
+			width: 8em;
+		}
+	</style>
+</head>
+<body>
+	<div class="something-meaningful">
+		<div>
+			I have a nice subtle inner rounding,
+			don't I look pretty?
+		</div>
+	</div>
+
+	<div class="single">
+		I have a nice subtle inner rounding,
+		don't I look pretty?
+	</div>
+</body>
+</html>

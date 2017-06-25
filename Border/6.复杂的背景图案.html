@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		.background{
+			width: 300px;
+			height: 300px;
+			margin: 10px;
+			float: left;
+			color: #fff;
+			font-size: 30px;
+			font-weight: bold;
+			text-align: center;
+			line-height: 10;
+			background-size: 1em 1em;
+		}
+	
+		.background-grid{
+			width: 285px;
+			height: 285px;
+			background-color: #fff;
+			background-image: linear-gradient(90deg, rgba(200, 0, 0, .5) 50%, transparent 0),
+							  linear-gradient(rgba(200, 0, 0, .5) 50%, transparent 0);
+		}
+
+		.background-table{
+			background-color: #58a;
+			background-image: linear-gradient(#fff 1px, transparent 0),
+							  linear-gradient(90deg, #fff 1px, transparent 0);
+		}
+
+		.background-double-table{
+			background-color: #58a;
+			background-image: linear-gradient(#fff 2px, transparent 0),
+							  linear-gradient(90deg, #fff 2px, transparent 0),
+							  linear-gradient(hsla(0, 0%, 100%, .3) 1px, transparent 0),
+							  linear-gradient(90deg, hsla(0, 0%, 100%, .3) 1px, transparent 0);
+			background-size: 2.5em 2.5em, 2.5em 2.5em,
+							 .5em .5em, .5em .5em;
+		}
+
+		.background-polka{
+			background: #655;
+			background-image: radial-gradient(tan 30%, transparent 0),
+							  radial-gradient(tan 30%, transparent 0);
+			background-position: 0 0, .5em .5em;
+			background-size: 1em 1em; 
+		}
+
+		.background-checkerboard{
+			background-color: #eee;
+			/*background-image: linear-gradient(45deg, #bbb 25%, transparent 0),
+							  linear-gradient(45deg, transparent 75%, #bbb 0),
+							  linear-gradient(45deg, #bbb 25%, transparent 0),
+							  linear-gradient(45deg, transparent 75%, #bbb 0);
+			background-position: 0 0, .5em .5em,
+								 .5em .5em, 1em 1em;*/
+
+			background-image: linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, .25) 0),
+							  linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, .25) 0);
+			background-position: 0 0, .5em .5em;
+		}
+
+		.background-checkerboard-svg{
+			background-color: #eee;
+			background-image: url('data:image/svg+xml,\
+				                  <svg xmlns="http://www.w3.org/2000/svg"\
+				                  width="100" height="100"\
+				                  fill-opacity=".25"\
+				                  <rect x="50" width="50" height="50" />\
+				                  <rect y="50" width="50" height="50" />\
+				                  </svg>');
+		}
+	</style>
+</head>
+<body>
+	<div class="background background-grid">grid</div>
+	<div class="background background-table">table</div>
+	<div class="background background-double-table">double-table</div>
+	<div class="background background-polka">polka</div>
+	<div class="background background-checkerboard">checkerboard</div>
+	<div class="background background-checkerboard-svg">checkerboard-svg</div>
+</body>
+</html>

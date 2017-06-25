@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		.background{
+			width: 300px;
+			height: 300px;
+			margin: 10px;
+			float: left;
+			color: #fff;
+			font-size: 30px;
+			font-weight: bold;
+			text-align: center;
+			line-height: 10;
+		}
+		.background-vertical{
+			background: linear-gradient(to right, #fb3 50%, #58a 0);
+			background-size: 30px 100%;
+		}
+		.background-horizontal{
+			background: linear-gradient(#fb3 50%, #58a 0);
+			background-size: 100% 30px;
+		}
+		.background-rotate{
+			background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+			background-size: 30px 30px;
+		}
+		.background-repeat{
+			background: repeating-linear-gradient(45deg, 
+												  #fb3, 
+												  #fb3 15px, 
+												  #58a 0, 
+												  #58a 30px);
+		}
+		.background-same{
+			background-color: #58a;
+			background-image: repeating-linear-gradient(45deg, 
+														hsla(0, 0%, 100%, .1),
+														hsla(0, 0%, 100%, .1) 15px,
+														transparent 0,
+														transparent 30px);
+		}
+	</style>
+</head>
+<body>
+	<div class="background background-horizontal">horizontal</div>
+	<div class="background background-vertical">vertical</div>
+	<div class="background background-rotate">rotate</div>
+	<div class="background background-repeat">repeating</div>
+	<div class="background background-same">same</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		.border{
+			color: skyblue;
+			font-size: 30px;
+			font-weight: bold;
+			line-height: 10em;
+			width: 15em;
+			height: 10em;
+			text-align: center;
+
+			padding: 1em;
+			border: 1em solid transparent;
+			margin: 1em;
+		}
+
+		.border-image{
+			background-image: 
+			    linear-gradient(white, white),
+			    url(../images/poster.jpg);
+			background-size: cover;
+			background-clip: padding-box, border-box;
+			background-origin: border-box;
+			background-position: center center;
+		}
+
+		.border-email{
+			background: 
+				linear-gradient(white, white),
+				repeating-linear-gradient(-45deg,
+					red 0, red 12.5%,
+					transparent 0, transparent 25%,
+					#58a 0, #58a 37.5%,
+					transparent 0, transparent 50%);
+			background-clip: padding-box, border-box;
+			background-position: 0;
+			background-size: 5em 5em;
+		}
+
+		@keyframes ants{
+			to{
+				background-position: 100%;
+			}
+		}
+
+		.border-ant{
+			border-width: 1px;
+			background-image: 
+				linear-gradient(white, white),
+				repeating-linear-gradient(-45deg,
+					black 0, black 25%,
+					white 0, white 50%);
+			background-clip: padding-box, border-box;
+			background-position: 0;
+			background-size: .6em .6em;
+
+			animation: ants 12s linear infinite;
+		}
+	</style>
+</head>
+<body>
+	<div class="border border-image">Border with image</div>
+	<div class="border border-email">Email</div>
+	<div class="border border-ant">Ant</div>
+</body>
+</html>
