@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		.parallelogram{
+			position: relative;
+			width: 200px;
+			height: 100px;
+			background: #58a;
+			color: #fff;
+			margin: 100px;
+			border: none;
+			outline: none;
+		}
+
+		.parallelogram::before{
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: #58a;
+			transform: skew(45deg);
+			z-index: -1;
+		}
+
+		.octagonal{
+			width: 200px;
+			height: 200px;
+			margin: 100px;
+			background: #58a;
+			position: relative;
+		}
+
+		.octagonal::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: #58a;
+			z-index: -1;
+			transform: rotate(45deg);
+		}
+	</style>
+</head>
+<body>
+	<button class="parallelogram">Click</button>
+	<div class="octagonal"></div>
+</body>
+</html>

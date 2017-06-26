@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		div{
+			background: #58a;
+			width: 200px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			color: #fff;
+			margin: 10px;
+		}
+
+		.ellipse{
+			border-radius: 50%;
+		}
+
+		.half-top-ellipse{
+			border-radius: 50% / 100% 100% 0 0;
+		}
+
+		.half-left-ellipse{
+			border-radius: 100% 0 0 100% / 50%;
+		}
+
+		.half-right-ellipse{
+			border-radius: 0 100% 100% 0 / 50%;
+		}
+
+		.half-bottom-ellipse{
+			border-radius: 50% / 0 0 100% 100%;
+		}
+
+		.quarter-ellipse{
+			border-radius: 100% 0 0 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="ellipse">nice to meet you!</div>
+	<div class="half-left-ellipse">nice to meet you!</div>
+	<div class="half-top-ellipse">nice to meet you!</div>
+	<div class="half-right-ellipse">nice to meet you!</div>
+	<div class="half-bottom-ellipse">nice to meet you!</div>
+	<div class="quarter-ellipse">nice to meet you!</div>
+</body>
+</html>

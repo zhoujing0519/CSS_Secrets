@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		body{
+			background: #58a;
+		}
+
+		.picture{
+			float: left;
+			width: 500px;
+			transform: rotate(45deg);
+			overflow: hidden;
+			margin: 100px;
+		}
+		
+		.picture > img{
+			max-width: 100%;
+			transform: rotate(-45deg) scale(1.42);
+		}
+
+		.clip{
+			float: left;
+			width: 500px;
+			clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+		}
+	</style>
+</head>
+<body>
+	<div class="picture"><img src="../images/avatar.jpeg" alt="" /></div>
+	<img class="clip" src="../images/avatar.jpeg" alt="" />
+</body>
+</html>
