@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			font-size: 100px;
+			width: 2em;
+			height: 2em;
+			margin: .5em auto;
+			background: #58a;
+		}
+
+		.shadow-one-side{
+			box-shadow: 0 5px 4px -4px black;
+		}
+
+		.shadow-2-sides{
+			box-shadow: 4px 4px 8px -4px black;
+		}
+
+		.shadow-opposite-sides{
+			box-shadow: 
+				5px 0 5px -5px black,
+				-5px 0 5px -5px black;
+		}
+	</style>
+</head>
+<body>
+	<div class="shadow shadow-one-side"></div>
+	<div class="shadow shadow-2-sides"></div>
+	<div class="shadow shadow-opposite-sides"></div>
+</body>
+</html>

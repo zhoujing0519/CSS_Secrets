@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,
+		main::before{
+			background: url(../images/background.png) 0 / cover fixed;
+		}
+
+		main{
+			width: 600px;
+			line-height: 2;
+			position: relative;
+			margin: 300px auto;
+			background: hsla(0, 0%, 100%, .3);
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		main::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			filter: blur(10px);
+			z-index: -1;
+			margin: -30px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 规定文档的主要内容 -->
+	<main>
+		<!-- 标记长的引用 -->
+		<blockquote>
+			"The only way to get eid of a temptation is to yield to it.
+			Resist it, and your soul grows sick with lnging for the things it has forbidden to itself with desire for what its monstrous laws have made monstrous and unlawful."
+			"The only way to get eid of a temptation is to yield to it.
+			Resist it, and your soul grows sick with lnging for the things it has forbidden to itself with desire for what its monstrous laws have made monstrous and unlawful."
+			<footer>
+				<!-- 引用的来源 -->
+				<cite>
+					Oscar Wilde,
+					The Picture of Dorian Gray
+				</cite>
+			</footer>
+		</blockquote>
+	</main>
+</body>
+</html>

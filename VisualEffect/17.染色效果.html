@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img{
+			width: 300px;
+			transition: filter .5s;
+		}
+
+		img:hover,
+		img:focus{
+			filter: none;
+		}
+
+		/*sepia 降饱和度的橙黄色染色效果*/
+		/*saturate 提升饱和度*/
+		/*hue-rotate 调整色值*/
+
+		.color-tint-filter{
+			filter: sepia(1) saturate(4) hue-rotate(295deg);
+		}
+	</style>
+</head>
+<body>
+	<img class="color-tint-filter" src="../images/avatar.jpeg" alt="">
+</body>
+</html>
