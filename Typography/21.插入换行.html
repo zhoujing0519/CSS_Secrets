@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		dt, 
+		dd{
+			display: inline;
+		}
+
+		dt{
+			font-weight: bold;
+		}
+
+		dd{
+			margin: 0;
+		}
+
+		dd + dt::before{
+			content: '\A';
+			white-space: pre;
+		}
+
+		dd + dd::before{
+			content: ', ';
+
+			/*负边距用来处理dd与dd之间换行引起的空白符*/
+			margin-left: -.25em;
+		}
+	</style>
+</head>
+<body>
+	<dl>
+		<dt>Name:</dt>
+		<dd>Lea Verou</dd>
+
+		<dt>Email:</dt>
+		<dd>lea@verou.me</dd>
+		<dd>leaverou@mit.edu</dd>
+		<dd>lea@verou.me</dd>
+		<dd>leaverou@mit.edu</dd>
+
+		<dt>Location:</dt>
+		<dd>Earth</dd>
+	</dl>
+</body>
+</html>
