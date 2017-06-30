@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		button{
+			width: 4em;
+			height: 4em;
+			background: #58a;
+			border-radius: 50%;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			position: relative;
+		}
+
+		button::before{
+			content: '';
+			position: absolute;
+			left: -.5em;
+			top: -.5em;
+			right: -.5em;
+			bottom: -.5em;
+		}
+	</style>
+</head>
+<body>
+	<button></button>
+</body>
+<script type="text/javascript">
+	var btn = document.getElementsByTagName('button')[0],
+		count = 0;;
+
+	btn.onclick = function(){
+		console.log(count++);
+	};
+</script>
+</html>

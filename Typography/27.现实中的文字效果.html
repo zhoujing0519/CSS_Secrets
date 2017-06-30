@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
-		div{
+		div, h1{
 			font-size: 30px;
 			margin: 1em;
 			padding: .5em;
@@ -24,6 +24,73 @@
 
 		.stroked-text{
 			background: deeppink;
+			color: white;
+			text-shadow: 
+				1px 1px black,
+				-1px -1px black,
+				1px -1px black,
+				-1px 1px black;
+		}
+
+		h1{
+			font: 500%/1 Rockwell, serif;
+			background: deeppink;
+			color: white;
+		}
+
+		h1 text{
+			fill: currentColor;
+		}
+
+		h1 svg{
+			overflow: visible;
+		}
+
+		h1 use{
+			stroke: black;
+			stroke-width: 6;
+			stroke-linejoin: round;
+		}
+
+		.glow{
+			display: block;
+			font-size: 30px;
+			padding: .5em;
+			line-height: 3;
+			background: #203;
+			color: #fff;
+			transition: 1s;
+			margin: 1em;
+		}
+
+		.glow:hover{
+			text-shadow: 0 0 .1em, 0 0 .3em;
+		}
+
+		.glow:hover{
+			text-shadow: 0 0 .1em, 0 0 .3em;
+		}
+
+		.glow-transparent:hover{
+			color: transparent;
+			text-shadow: 0 0 .1em white, 0 0 .3em white;
+		}
+
+		.glow-filter:hover{
+			text-shadow: none;
+			filter: blur(.05em);
+		}
+
+		.extruded{
+			background: #58a;
+			color: #fff;
+			text-shadow: 
+				0 1px hsl(0, 0%, 85%),
+				0 2px hsl(0, 0%, 80%),
+				0 3px hsl(0, 0%, 75%),
+				0 4px hsl(0, 0%, 70%),
+				0 5px hsl(0, 0%, 65%),
+				0 5px 10px black;
 		}
 	</style>
 </head>
@@ -37,5 +104,23 @@
 		"The only way to get rid of a temptation is to yield to it."
 		——Oscar Wilde, The Picture of Dorian Gray
 	</div>
+
+	<div class="stroked-text">
+		"The only way to get rid of a temptation is to yield to it."
+		——Oscar Wilde, The Picture of Dorian Gray
+	</div>
+
+	<h1>
+		<svg width="2em" height="1.2em">
+			<use xlink:href="#css"/>
+			<text id="css" y="1em">CSS</text>
+		</svg>
+	</h1>
+
+	<a class="glow" href="#">Dizzy</a>
+	<a class="glow glow-transparent" href="#">Dizzy</a>
+	<a class="glow glow-filter" href="#">Dizzy</a>
+
+	<div class="extruded">CSS3D</div>
 </body>
 </html>

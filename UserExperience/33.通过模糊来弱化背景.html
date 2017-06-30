@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		main{
+			transition: .6s filter;
+		}
+
+		main.de-emphasized{
+			filter: blur(5px);
+		}
+	</style>
+</head>
+<body>
+	<input id="blurButton" type="checkbox">
+	<main>
+		Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet 
+		Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet 
+		Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet 
+		Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet 
+		Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet 
+		Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet 
+		Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet 
+		Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet 
+		Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet 
+		Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet Bacon Ipsum dolor sit amet 
+	</main>
+	<div class="dialog">
+		hahahahahahahahahahahhahaha
+	</div>
+</body>
+<script type="text/javascript">
+	var blurButton = document.getElementById('blurButton'),
+		main = document.getElementsByTagName('main')[0];
+
+	blurButton.onclick = function(){
+		main.classList.add('de-emphasized');
+	};
+</script>
+</html>
