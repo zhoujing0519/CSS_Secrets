@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		ul{
+			list-style: none;
+			counter-reset: item;
+		}
+
+		li{
+			display: inline-block;
+			width: 3em;
+			height: 3em;
+			text-align: center;
+			line-height: 3;
+			color: #fff;
+			font-weight: bold;
+			border-radius: .5em;
+			background-color: deeppink;
+		}
+
+		/*不包含第四项*/
+		.test li:nth-child(4) ~ li{
+			background-color: yellowgreen;
+		}
+
+		/*当列表正好包含四项时，选中所有列表项*/
+		.equals li:first-child:nth-last-child(4),
+		.equals li:first-child:nth-last-child(4) ~ li{
+			background-color: yellowgreen;
+		}
+
+		/*当列表至少包含四项时，选中所有列表项*/
+		.least li:first-child:nth-last-child(n + 4),
+		.least li:first-child:nth-last-child(n + 4) ~ li{
+			background-color: yellowgreen;
+		}
+
+		/*当列表最多包含四项时，选中所有列表项*/
+		.last li:first-child:nth-last-child(-n + 4),
+		.last li:first-child:nth-last-child(-n + 4) ~ li{
+			background-color: yellowgreen;
+		}
+
+		li::before{
+			counter-increment: item;
+			content: counter(item);
+		}
+	</style>
+</head>
+<body>
+	<ul class="test">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul class="equals">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul class="least">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul class="last">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

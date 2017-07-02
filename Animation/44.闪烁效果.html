@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		div{
+			width: 5em;
+			height: 5em;
+			margin: 1em;
+			border-radius: .5em;
+			text-align: center;
+			line-height: 5em;
+			background-color: yellowgreen;
+			color: #fff;
+			font-weight: bold;
+		}
+
+		@keyframes blink-smooth{
+			to{
+				color: transparent;
+			}
+		}
+
+		@keyframes blink{
+			50%{
+				color: transparent;
+			}
+		}
+
+		.normal{
+			animation: .5s blink-smooth 6;
+		}
+
+		.alternate{
+			animation: .5s blink-smooth 6 alternate;
+		}
+
+		.reverse{
+			animation: .5s blink-smooth 6 reverse;
+		}
+
+		.alternate-reverse{
+			animation: .5s blink-smooth 6 alternate-reverse;
+		}
+
+		.steps{
+			animation: 1s blink 3 steps(1);
+		}
+	</style>
+</head>
+<body>
+	<div class="normal">normal</div>
+	<div class="alternate">alternate</div>
+	<div class="reverse">reverse</div>
+	<div class="alternate-reverse">alternate-reverse</div>
+	<div class="steps">steps</div>
+</body>
+</html>
